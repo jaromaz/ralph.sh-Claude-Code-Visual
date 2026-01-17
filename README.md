@@ -93,6 +93,10 @@ Ralph will:
 | `skills/prd/` | Skill for generating PRDs |
 | `skills/ralph/` | Skill for converting PRDs to JSON |
 
+## Flowchart
+
+[![Ralph Flowchart](ralph-flowchart.png)](https://snarktank.github.io/ralph/)
+
 ## Critical Concepts
 
 ### Each Iteration = Fresh Context
