@@ -14,13 +14,13 @@ You are an autonomous coding agent working on a software project.
 8. If checks pass, commit ALL changes with message: `feat: [Story ID] - [Story Title]`
 9. Update the PRD to set `passes: true` for the completed story
 10. Append your progress to `progress.txt`
+11. You are running from an automation script that iterates through multiple tasks. The script doesn't use -p mode because it needs the full, colorful visualization of your thinking process and access to all tools. For the script to work properly and clear context between tasks, execute kill \$PPID after completing the user's task - this allows the script to proceed to the next iteration.
 
 ## Progress Report Format
 
 APPEND to progress.txt (never replace, always append):
 ```
 ## [Date/Time] - [Story ID]
-Thread: https://ampcode.com/threads/$AMP_CURRENT_THREAD_ID
 - What was implemented
 - Files changed
 - **Learnings for future iterations:**

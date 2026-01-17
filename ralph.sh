@@ -51,30 +51,35 @@ if [ ! -f "$PROGRESS_FILE" ]; then
   echo "---" >> "$PROGRESS_FILE"
 fi
 
+printf "\n\n"
 echo "Starting Ralph - Max iterations: $MAX_ITERATIONS"
 
 for i in $(seq 1 $MAX_ITERATIONS); do
-  echo ""
+  echo
   echo "═══════════════════════════════════════════════════════"
   echo "  Ralph Iteration $i of $MAX_ITERATIONS"
   echo "═══════════════════════════════════════════════════════"
-  
-  # Run amp with the ralph prompt
-  OUTPUT=$(cat "$SCRIPT_DIR/prompt.md" | amp --dangerously-allow-all 2>&1 | tee /dev/stderr) || true
-  
-  # Check for completion signal
-  if echo "$OUTPUT" | grep -q "<promise>COMPLETE</promise>"; then
-    echo ""
+  echo
+  for z in {3..1}; do printf "$z ... "; sleep 1; done
+  printf "\n\n"
+  # Run claude with the ralph CLAUDE.md prompt
+  ( cat "./CLAUDE.md" | claude --dangerously-skip-permissions ) || true
+  if ! grep -q '"passes": false' prd.json; then
+    printf "\n\n"
     echo "Ralph completed all tasks!"
     echo "Completed at iteration $i of $MAX_ITERATIONS"
     exit 0
   fi
-  
+    
+  echo
   echo "Iteration $i complete. Continuing..."
-  sleep 2
+  echo
+
 done
 
-echo ""
+echo
 echo "Ralph reached max iterations ($MAX_ITERATIONS) without completing all tasks."
 echo "Check $PROGRESS_FILE for status."
+printf "\n\n"
 exit 1
+
