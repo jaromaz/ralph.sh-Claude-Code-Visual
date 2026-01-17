@@ -1,0 +1,30 @@
+{
+  "project": "Hello World",
+  "branchName": "ralph/hello-world",
+  "description": "Example Hello World Workflow.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Hello World in Bash",
+      "description": "As an Administrator, I need a 'Hello World' script in Bash.",
+      "acceptanceCriteria": [
+        "A hw.sh script exists in the root directory that outputs the text 'Hello World.'"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "Hello World in Python",
+      "description": "As an Administrator, I need a 'Hello World' script in Python.",
+      "acceptanceCriteria": [
+        "A hw.py script exists in the root directory that outputs the text 'Hello World'.",
+        "The hw.py script has execute permissions."
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
