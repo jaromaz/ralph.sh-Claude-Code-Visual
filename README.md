@@ -36,8 +36,8 @@ chmod +x scripts/ralph/ralph.sh
 Copy the skills to your Claude Code config for use across all projects:
 
 ```bash
-cp -r skills/prd ~/.claude/skills/
-cp -r skills/ralph ~/.claude/skills/
+cp -r /path/to/ralph/skills/prd ~/.claude/skills/
+cp -r /path/to/ralph/skills/ralph ~/.claude/skills/
 ```
 
 ## Workflow
