@@ -1,4 +1,4 @@
-# Ralph
+# ralph.sh Claude Code Visual
 
 ![Ralph](ralph.png)
 
