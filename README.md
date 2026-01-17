@@ -2,7 +2,7 @@
 
 ![Ralph](ralph.png)
 
-Ralph is an autonomous AI agent loop that runs [Claude Code](https://code.claude.com/docs/en/overview)) repeatedly until all PRD items are complete. Each iteration is a fresh Claude Code instance with clean context. Memory persists via git history, `progress.txt`, and `prd.json`.
+Ralph is an autonomous AI agent loop that runs [Claude Code](https://code.claude.com/docs/en/overview) repeatedly until all PRD items are complete. Each iteration is a fresh Claude Code instance with clean context. Memory persists via git history, `progress.txt`, and `prd.json`.
 
 This version allows you to **preview the process** in a **visual way in Claude Code** — with syntax highlighting and visualization of individual steps. It also fully aligns with Geoffrey Huntley’s idea and generates more correct, higher-quality source code — unlike the Anthropic Ralph Wiggum Plugin for Claude Code.
 
